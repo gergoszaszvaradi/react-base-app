@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    line-height: 1.5rem;
+    -webkit-text-size-adjust: 100%;
+}
+body {
+    overflow-x: hidden;
+}
+main {
+    display: block;
+}
+a {
+    background-color: transparent;
+    text-decoration: none;
+}
+img {
+    border-style: none;
+    vertical-align: baseline;
+}
+ul, ol {
+    margin-left: 1.5em;
+}
+textarea {
+    overflow: auto;
+}

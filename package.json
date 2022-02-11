@@ -1,0 +1,46 @@
+{
+    "name": "base-react-app",
+    "version": "1.0.0",
+    "description": "Base React App",
+    "main": "dist/index.js",
+    "repository": "https://github.com/gergoszaszvaradi/base-react-app",
+    "author": "gergoszaszvaradi",
+    "license": "MIT",
+    "private": false,
+    "scripts": {
+        "start": "webpack serve --color",
+        "build": "webpack --config webpack.config.js --color",
+        "lint": "eslint src/**/*",
+        "lint-fix": "eslint src/**/* --fix",
+        "configure": "node _configure.js"
+    },
+    "dependencies": {
+        "react": "^17.0.2",
+        "react-dom": "^17.0.2",
+        "react-router-dom": "^6.2.1"
+    },
+    "devDependencies": {
+        "@types/react": "^17.0.39",
+        "@types/react-dom": "^17.0.11",
+        "@types/react-router-dom": "^5.3.3",
+        "@types/webpack": "^5.28.0",
+        "@typescript-eslint/eslint-plugin": "^5.11.0",
+        "@typescript-eslint/parser": "^5.11.0",
+        "css-loader": "^6.6.0",
+        "dotenv-webpack": "^7.1.0",
+        "eslint": "^8.8.0",
+        "eslint-config-gergoszaszvaradi": "^1.0.0",
+        "eslint-plugin-import": "^2.25.4",
+        "eslint-plugin-react": "^7.28.0",
+        "eslint-plugin-react-hooks": "^4.3.0",
+        "html-webpack-plugin": "^5.5.0",
+        "sass": "^1.49.7",
+        "sass-loader": "^12.4.0",
+        "style-loader": "^3.3.1",
+        "ts-loader": "^9.2.6",
+        "typescript": "^4.5.5",
+        "webpack": "^5.68.0",
+        "webpack-cli": "^4.9.2",
+        "webpack-dev-server": "^4.7.4"
+    }
+}
