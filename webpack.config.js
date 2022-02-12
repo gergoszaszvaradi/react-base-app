@@ -21,21 +21,32 @@ module.exports = {
                 exclude: /node_modules/
             },
             {
-                test: /(\.module)?\.s[ac]ss$/i,
-                use: [
-                    "style-loader",
+                test: /\.((c|sa|sc)ss)$/i,
+                oneOf: [
                     {
-                        loader: "css-loader",
-                        options: {
-                            modules: {
-                                localIdentName: "[path][name]__[local]--[hash:base64:5]",
+                        resourceQuery: /\.module/,
+                        use: [
+                            "style-loader",
+                            {
+                                loader: "css-loader",
+                                options: {
+                                    modules: {
+                                        localIdentName: "[path][name]__[local]--[hash:base64:5]",
+                                    },
+                                    sourceMap: true,
+                                },
                             },
-                            sourceMap: true,
-                        },
+                            "sass-loader",
+                        ],
                     },
-                    "sass-loader",
+                    {
+                        use: [
+                            "style-loader",
+                            "css-loader",
+                            "sass-loader",
+                        ],
+                    },
                 ],
-                exclude: /node_modules/
             },
             {
                 test: /\.(png|jpe?g|gif|svg)$/i,
