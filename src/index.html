@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="#{projectAuthor}">
+        <meta name="description" content="#{projectDescription}">
+        <meta property="og:title" content="#{projectName}">
+        <meta property="og:description" content="#{projectDescription}">
+        <meta name="twitter:title" content="#{projectName}">
+        <meta name="twitter:description" content="#{projectDescription}">
+        <title>#{projectName}</title>
+
+        <link rel="manifest" href="manifest.json">
+    </head>
+    <body>
+        <div id="app"></div>
+
+        <script defer>
+            if ("serviceWorker" in navigator) navigator.serviceWorker.register("./service-worker.js");
+        </script>
+    </body>
+</html>

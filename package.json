@@ -1,0 +1,43 @@
+{
+    "name": "react-base-app",
+    "version": "1.0.0",
+    "description": "React Base App",
+    "main": "index.js",
+    "author": "gergoszaszvaradi",
+    "license": "MIT",
+    "scripts": {
+        "start": "webpack serve --color --mode development",
+        "build": "webpack --config webpack.config.js --color --mode production",
+        "lint": "eslint 'src/**/*'",
+        "lint-fix": "eslint 'src/**/*' --fix",
+        "configure": "node _configure.js"
+    },
+    "dependencies": {
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0"
+    },
+    "devDependencies": {
+        "@types/node": "^18.6.3",
+        "@types/react": "^18.0.15",
+        "@types/react-dom": "^18.0.6",
+        "@typescript-eslint/eslint-plugin": "^5.32.0",
+        "@typescript-eslint/parser": "^5.32.0",
+        "copy-webpack-plugin": "^11.0.0",
+        "css-loader": "^6.6.0",
+        "eslint": "^8.21.0",
+        "eslint-config-gergoszaszvaradi": "^1.0.4",
+        "eslint-plugin-import": "^2.26.0",
+        "eslint-plugin-react": "^7.30.1",
+        "eslint-plugin-react-hooks": "^4.6.0",
+        "html-webpack-plugin": "^5.5.0",
+        "sass": "^1.54.1",
+        "sass-loader": "^13.0.2",
+        "style-loader": "^3.3.1",
+        "ts-loader": "^9.3.1",
+        "typescript": "^4.7.4",
+        "webpack": "^5.74.0",
+        "webpack-cli": "^4.10.0",
+        "webpack-dev-server": "^4.9.3",
+        "workbox-webpack-plugin": "^6.5.3"
+    }
+}

@@ -1,0 +1,8 @@
+node_modules
+dist
+
+.npm
+.env
+.eslintcache
+.yarn-integrity
+yarn-error.log
