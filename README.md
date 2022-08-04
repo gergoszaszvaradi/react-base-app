@@ -9,6 +9,18 @@ After choosing the right template, clone the repository
 git clone https://github.com/gergoszaszvaradi/react-base-app -b BRANCH_NAME
 ```
 
+Available variations:
+
+| Branch Name   | Description                                                 |
+|---------------|-------------------------------------------------------------|
+| minimal       | React app with the absolute minimum requirements.           |
+| multipage     | **minimal** + react-router-dom                              |
+| stateful      | **multipage** + state management + react-query              |
+| frontend      | **stateful** + mdi icons + bootstrap + internationalization |
+| fullstack     | **frontend** + express backend                              |
+| fullstack-db  | **fullstack** + mongodb                                     |
+
+
 Once the repository is cloned, rename the folder. Alternatively, you can clone the repository into an existing folder.
 
 Now you need to configure the project. Use `cd` to move into the folder of the project, then run the following:
