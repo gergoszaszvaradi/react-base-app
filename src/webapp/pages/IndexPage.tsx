@@ -30,7 +30,7 @@ const IndexPage : React.FC = () => {
             <p>Echo: {state.text}</p>
             <p>Count: {state.count}</p>
 
-            {users.map((user) => <p key={user.id}>{user.firstName} {user.lastName} {user.email}</p>)}
+            {users.map((user) => <p key={user.email}>{user.firstName} {user.lastName} {user.email}</p>)}
 
             <LinkContainer to="/new">
                 <Button variant="primary">To New Page</Button>

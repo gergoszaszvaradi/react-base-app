@@ -1,26 +1,14 @@
-import { User, UserCreationDto } from "common/models/user";
+import { User } from "common/models/user";
 import express from "express";
+
+import UserModel from "../db/models/user";
 
 const router = express.Router();
 
-const users : User[] = [
-    {
-        id: 0,
-        email: "george.bluth@reqres.in",
-        firstName: "George",
-        lastName: "Bluth",
-    },
-];
+router.get("/", async (req, res) => res.json(await UserModel.find()));
 
-router.get("/", (req, res) => res.json(users));
-
-router.post("/", (req : express.Request<{}, User, UserCreationDto>, res) => {
-    console.log(req.body);
-    const user : User = {
-        id: users.length,
-        ...req.body,
-    };
-    users.push(user);
+router.post("/", async (req : express.Request<{}, unknown, User>, res) => {
+    const user = await new UserModel(req.body).save();
     res.json(user);
 });
 

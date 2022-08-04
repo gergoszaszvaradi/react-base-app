@@ -3,8 +3,11 @@ import dotenv from "dotenv";
 import path from "path";
 
 import userApi from "./api/users";
+import db from "./db/db";
 
 dotenv.config();
+
+db.connect();
 
 const PORT = process.env.PORT ?? 5000;
 const WEBAPP_DIR = path.join(process.cwd(), "dist", "webapp");
